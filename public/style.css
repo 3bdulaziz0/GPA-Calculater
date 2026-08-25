@@ -1,0 +1,368 @@
+/* 
+list-group       --white
+list-group-item  --white
+card-header      --rgba(var(--bs-body-color-rgb), 0.03);
+background       --white //
+
+
+*/
+
+
+
+:root {
+    --background-color: #1a202c8a;
+    --container-background-color: #1a202c00;
+
+
+    --text-color: black;
+
+    --card-header-color: rgba(var(--bs-body-color-rgb), 0.03);
+    --list-item-color: white;
+    --list-group-color: white;
+
+    --table-head-color: var(--bs-table-bg);
+    --course-background-color: white;
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    background-color: var(--background-color);
+    direction: rtl;
+}
+
+.container1 {
+    width: 100%;
+    height: 100%;
+    background-color: var(--container-background-color);
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    height: 20vh;
+    width: 100%;
+    background-color: var(--background-color);
+    padding: 5% 5%;
+    display: flex;
+    /* justify-content: space-around; */
+    align-items: center;
+}
+
+.prevent-select {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+        
+.courses {
+    width: 100%;
+    height: 100%;
+    margin: 12vh 0px;
+    overflow: hidden;
+}
+
+
+
+ table {
+    width: 80%;
+ }
+
+tr {
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+ }
+
+
+td, th {
+    padding: 1.25rem 1rem;
+    flex-grow: 0;
+    width: 19%;
+    display: flex;
+    justify-content: center;
+}
+
+.name-column {
+    width: 26%;
+}
+.score-column {
+    width: 25%;
+}
+.credit-column {
+    width: 25%;
+}
+
+.grade-column {
+    width: 10%;
+}
+
+.points-column {
+    width: 8%;
+}
+
+.delete-column {
+    width: 6%;
+}
+
+.inp {
+    width: 100%;
+}
+
+#courses input, select {
+    border: 1px solid rgba(128, 128, 128, 0.486);
+    margin: 1.5rem 0.5rem;
+    height: 50%;
+}
+
+
+.cards {
+    width: 65vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.card {
+    height: 100%;
+    width: 30vw;
+    min-width: 309px;
+}
+
+.disabled-cards {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.form-check-label {
+        width: 12rem;
+    }
+
+.scale {
+    width: 50%;
+}
+
+.results {
+    display: flex;
+    margin: 2%;
+    justify-content: center;
+}
+
+.results-table {
+    width: 80%;
+    display: in;
+    justify-content: end;
+}
+
+.result-N {
+    float: left;
+    padding-left: 20%;
+}
+
+.results-content {
+    display: flex;
+}
+
+
+
+#FCIT-block {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+
+.block {
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  width: 30%;
+  text-align: center;
+  min-width: 35px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+
+  font-size: clamp(0.6rem, 2.5vw, 0.9rem);
+  line-height: 1;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.footer {
+    bottom: 0;
+    width: 100%;
+    height: 10vh;
+    text-align: center;
+    align-items: center;
+    font-size: 1rem;
+    color: #fff;
+    background-color: var(--background-color);
+}
+
+
+
+
+
+
+@media (max-width: 1200px) {
+    .cards {
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+    }
+
+    .card {
+        margin-bottom: 1rem;
+        margin: auto 2.5%;
+    }
+
+    .form-check-label {
+        display: inline;
+    }
+
+    tr {
+        flex-wrap: wrap;
+    }
+
+    td, th {
+        width: 50%;
+        font-size: 14px;
+        padding: 6px;
+    }
+
+  
+    .FCIT-form {
+        margin-bottom: 5%;
+    }
+
+    .block {
+        width: auto !important;
+    }
+}
+
+.no-flex tr {
+  display: table-row !important;
+}
+
+.no-flex td,
+.no-flex th {
+  display: table-cell !important;
+  vertical-align: middle;
+}
+
+.block-container {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+.block {
+  padding: 5px 8px;
+  border-radius: 6px;
+  color: white;
+  font-weight: bold;
+  width: 30%;
+  text-align: center;
+  min-width: 35px;
+}
+
+.block.boys {
+  background-color: #4478c5a4;
+}
+
+.block.girls {
+  background-color: #df4a7cde;
+}
+
+
+
+
+@media (max-width: 760px) {
+    .cards {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .card {
+        width: 90%;
+        margin-bottom: 1rem;
+    }
+
+    .form-check-label {
+        display: inline;
+    }
+
+    table {
+    width: 90% !important;
+     }
+
+    tr {
+        flex-wrap: wrap;
+    }
+
+    td, th {
+        width: 50%;
+        font-size: 14px;
+        padding: 6px;
+    }
+
+    #FCIT-block {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .course {
+        padding: 0 0 !important;
+    }
+
+    .name-column {
+        width: 29%;
+    }
+    .score-column {
+        width: 16%;
+    }
+    .credit-column {
+        width: 15%;
+    }
+
+    .grade-column {
+        width: 15%;
+    }
+
+    .points-column {
+        width: 16%;
+    }
+
+    .delete-column {
+        width: 9%;
+    }
+
+    .FCIT-table {
+        width: 100% !important;
+        max-width: 100%;
+        box-sizing: border-box;
+        padding: 0 8px;
+        overflow-x: hidden;
+    }
+
+    .FCIT-table table {
+        width: 100% !important;
+        table-layout: fixed;
+    }
+    
+}
+
+
+
+
+
